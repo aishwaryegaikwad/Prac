@@ -2,26 +2,13 @@
  var c=6;
 
 function setup() {
-  var canvasDiv = document.getElementById("myCanvas");
-  var w = canvasDiv.offsetWidth;
-  var h = canvasDiv.offsetHeight;
-  var sketchCanvas = createCanvas(w, h);
-  console.log(sketchCanvas);
-  sketchCanvas.parent("myCanvas");
- 
+  createCanvas(1200,1200);
   angleMode(DEGREES);
   colorMode(RGB);
   background(0);
 }
 
 function draw() {
- 
-  var canvasDiv = document.getElementById("myCanvas");
-  var w = canvasDiv.offsetWidth;
-  var h = canvasDiv.offsetHeight;
-  var sketchCanvas = createCanvas(w, h);
-  sketchCanvas.parent("myCanvas");
-  resizeCanvas(width, height);
   
   // for(var n=0; n<windowWidth*3.326; n++) {
   let a = n * 137.5;
@@ -34,19 +21,14 @@ function draw() {
   ellipse(x,y,9.708,9.708);
   
  n++;
-//    if(r>=width/3) {
-//      noLoop();
-//      // save("Phyllotaxis.jpg");
-//  }
+ //   if(r>=width/3) {
+ //     noLoop();
+ //     // save("Phyllotaxis.jpg");
+ // }
  
   
 }
 
-function windowResized() {
-  var canvasDiv = document.getElementById("myCanvas");
-  var w = canvasDiv.offsetWidth;
-  var h = canvasDiv.offsetHeight;
-  var sketchCanvas = createCanvas(w, h);
-  sketchCanvas.parent("myCanvas");
-  resizeCanvas(width, height);
+function windowResized(){
+  resizeCanvas(windowWidth,windowHeight);
 }
