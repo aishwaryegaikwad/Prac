@@ -8,6 +8,10 @@ function setup() {
   background(0);
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth,windowHeight);
+}
+
 function draw() {
   
   // for(var n=0; n<windowWidth*3.326; n++) {
@@ -29,6 +33,3 @@ function draw() {
   
 }
 
-function windowResized(){
-  resizeCanvas(windowWidth,windowHeight);
-}
