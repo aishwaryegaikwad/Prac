@@ -13,8 +13,8 @@ function draw() {
   // for(var n=0; n<windowWidth*3.326; n++) {
   let a = n * 137.5;
   let r = c * sqrt(n);
-  let x = r * cos(a) + width / 2;
-  let y = r * sin(a) + height / 2;
+  let x = r * cos(a) + windowWidth / 2;
+  let y = r * sin(a) + windowHeight / 2;
   fill(255);
   noStroke();
   
