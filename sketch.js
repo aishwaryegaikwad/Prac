@@ -2,13 +2,26 @@
  var c=6;
 
 function setup() {
-  createCanvas(1200,1200);
+  var canvasDiv = document.getElementById("myCanvas");
+  var width = canvasDiv.offsetWidth;
+  var height = canvasDiv.offsetHeight;
+  var sketchCanvas = createCanvas(width, height);
+  console.log(sketchCanvas);
+  sketchCanvas.parent("myCanvas");
+ 
   angleMode(DEGREES);
   colorMode(RGB);
   background(0);
 }
 
 function draw() {
+ 
+  var canvasDiv = document.getElementById("myCanvas");
+  var width = canvasDiv.offsetWidth;
+  var height = canvasDiv.offsetHeight;
+  var sketchCanvas = createCanvas(width, height);
+  sketchCanvas.parent("myCanvas");
+  resizeCanvas(width, height);
   
   // for(var n=0; n<windowWidth*3.326; n++) {
   let a = n * 137.5;
@@ -29,6 +42,11 @@ function draw() {
   
 }
 
-function windowResized(){
-  resizeCanvas(windowWidth,windowHeight);
+function windowResized() {
+  var canvasDiv = document.getElementById("myCanvas");
+  var width = canvasDiv.offsetWidth;
+  var height = canvasDiv.offsetHeight;
+  var sketchCanvas = createCanvas(width, height);
+  sketchCanvas.parent("myCanvas");
+  resizeCanvas(width, height);
 }
