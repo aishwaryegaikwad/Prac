@@ -2,7 +2,7 @@
  var c=6;
 
 function setup() {
-  createCanvas(1200,1200);
+  createCanvas(windowWidth,windowHeight);
   angleMode(DEGREES);
   colorMode(RGB);
   background(0);
